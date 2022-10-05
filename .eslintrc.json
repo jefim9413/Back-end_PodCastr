@@ -18,8 +18,12 @@
 			"prettier"
 	],
 	"rules": {
-
+    "no-useless-constructor":"off",
 		"no-console": "off",
+		"no-use-before-define": "off",
+		"class-methods-use-this": "off",
+		"import/prefer-default-export": "off",
+		"react/jsx-props-no-spreading": "off",
 		"@typescript-eslint/no-unused-vars": ["Error", {
 			"argsIgnorePattern": "_"
 		}],
