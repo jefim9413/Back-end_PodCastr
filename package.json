@@ -1,0 +1,8 @@
+{
+  "name": "Back-end_PodCastr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jefim9413/Back-end_PodCastr.git",
+  "author": "Jefferson Marques <jefferson.jsm3444@gmail.com>",
+  "license": "MIT"
+}
