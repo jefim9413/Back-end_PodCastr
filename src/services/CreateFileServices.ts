@@ -8,8 +8,12 @@ type FileResquest = {
 };
 
 class CreateFileServices {
-  async execute({ url, type, duration }: FileResquest): Promise<File> {
+  async execute({ url, type, duration }: FileResquest): Promise<File | Error> {
     const repository = getRepository(File);
+
+    if (await repository.findOne({ url })) {
+      return new Error("Category already exits");
+    }
 
     const file = repository.create({
       url,
