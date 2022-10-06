@@ -4,25 +4,43 @@ export class CreateEpisodes1664993123536 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: "file",
+        name: "episodes",
         columns: [
           {
             name: "id",
+            type: "varchar",
+          },
+          {
+            name: "title",
+            type: "varchar",
+          },
+          {
+            name: "members",
+            type: "varchar",
+          },
+          {
+            name: "published_at",
+            type: "varchar",
+          },
+          {
+            name: "thumbnail",
+            type: "varchar",
+          },
+          {
+            name: "description",
+            type: "varchar",
+          },
+          {
+            name: "file_id",
             type: "uuid",
-            isPrimary: true,
           },
+        ],
+        foreignKeys: [
           {
-            name: "url",
-            type: "varchar",
-            isUnique: true,
-          },
-          {
-            name: "type",
-            type: "varchar",
-          },
-          {
-            name: "duration",
-            type: "varchar",
+            name: "fk_episodes_file",
+            columnNames: ["file_id"],
+            referencedTableName: "file",
+            referencedColumnNames: ["id"],
           },
         ],
       })
@@ -30,6 +48,6 @@ export class CreateEpisodes1664993123536 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable("file");
+    await queryRunner.dropTable("episodes");
   }
 }
