@@ -8,7 +8,7 @@ type FileResquest = {
 };
 
 class CreateFileServices {
-  async execute({ url, duration, type }: FileResquest): Promise<File> {
+  async execute({ url, type, duration }: FileResquest): Promise<File> {
     const repository = getRepository(File);
 
     const file = repository.create({
