@@ -15,7 +15,7 @@ class File {
   @Column()
   duration: number;
 
-  file() {
+  constructor() {
     if (!this.id) {
       this.id = uuid();
     }
