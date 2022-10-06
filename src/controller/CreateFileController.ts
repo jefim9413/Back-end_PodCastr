@@ -9,6 +9,10 @@ class CreateFileController {
 
     const res = await service.execute({ url, type, duration });
 
+    if (res instanceof Error) {
+      return response.status(400).json(res.message);
+    }
+
     return response.json(res);
   }
 }
