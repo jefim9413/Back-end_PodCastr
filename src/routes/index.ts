@@ -3,6 +3,6 @@ import { fileRoutes } from "./file.routes";
 
 const routes = Router();
 
-routes.use("/file", fileRoutes);
+routes.use("/", fileRoutes);
 
 export { routes };
