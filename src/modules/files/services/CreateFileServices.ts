@@ -12,7 +12,7 @@ class CreateFileServices {
     const repository = getRepository(File);
 
     if (await repository.findOne({ url })) {
-      return new Error("Category already exits");
+      return new Error("File already exits");
     }
 
     const file = repository.create({
