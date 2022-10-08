@@ -1,5 +1,5 @@
 import { getRepository } from "typeorm";
-import { File } from "../entities/file";
+import { File } from "../../../entities/file";
 
 type FileResquest = {
   url: string;
