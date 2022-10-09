@@ -13,6 +13,9 @@ class Episodes {
   members: string;
 
   @Column()
+  description: string;
+
+  @Column()
   published_at: string;
 
   @Column()
@@ -21,6 +24,9 @@ class Episodes {
   @ManyToOne(() => File)
   @JoinColumn({ name: "file_id" })
   file: File;
+
+  @Column()
+  file_id: string;
 }
 
 export { Episodes };
