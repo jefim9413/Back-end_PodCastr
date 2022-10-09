@@ -41,6 +41,8 @@ export class CreateEpisodes1664993123536 implements MigrationInterface {
             columnNames: ["file_id"],
             referencedTableName: "file",
             referencedColumnNames: ["id"],
+            onDelete: "SET NULL",
+            onUpdate: "SET NULL",
           },
         ],
       })
